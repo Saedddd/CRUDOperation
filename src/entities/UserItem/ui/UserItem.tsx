@@ -2,6 +2,9 @@ import React from 'react'
 
 import { IUser } from '../types'
 
+import { FiEdit } from "react-icons/fi";
+import { FiTrash2 } from "react-icons/fi";
+
 
 const UserItem = ({id, name, email} : IUser) => {
   return (
@@ -14,8 +17,9 @@ const UserItem = ({id, name, email} : IUser) => {
                     <p className="text-gray-700">ID: {id}</p>
                 </div>
 
-                <div className="mt-4">
-                   
+                <div className=" flex cursor-pointer  gap-2 ">
+                    <FiEdit size={25} />
+                    <FiTrash2 size={25}/>
                 </div>
             </div>
         </div>
