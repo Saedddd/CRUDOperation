@@ -43,7 +43,7 @@ const AddUserFrom = () => {
         </label>
         <Button onClick={handleSubmit} className='flex my-5 w-auto btn btn-primary'>
             <>
-             Submit
+                Submit
             </>
         </Button>
     </div>
