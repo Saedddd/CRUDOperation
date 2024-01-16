@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import UserItem from '@/entities/UserItem';
 import { IUser} from '../types';
-import Button from '@/shared/Button';
+import Button from '@/shared/ui/Button';
 
 const UserList: React.FC = () => {
     const user = [
