@@ -2,6 +2,7 @@ import UserItem from '@/entities/UserItem';
 import React from 'react'
 
 import { IUser} from '../types';
+import Button from '@/shared/Button';
 
 const UserList: React.FC = () => {
     const user = [
@@ -23,6 +24,11 @@ const UserList: React.FC = () => {
   return (
     <div className='grid gap-5 md:grid-cols-2'> 
         {user.length ? renderCard() : <p className='text-center col-span-2 text-white font-bold'>No User</p>}
+        <Button className='flex m-auto btn btn-primary'>
+          <>  
+            <h1 className=''>Watch</h1>
+          </>
+        </Button>
     </div>
   )
 }
