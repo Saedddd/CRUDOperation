@@ -8,6 +8,8 @@ import React, { useState } from 'react'
 
 import { FormValues } from '../types'
 
+import Link from 'next/link'
+
 const AddUserFrom = () => {
     const [values, setValues] = useState<FormValues>({
         name: '',
@@ -15,7 +17,9 @@ const AddUserFrom = () => {
     })
 
     const handleSubmit = () => {
+        setValues({name:'', email: ''})
         console.log(values)
+
     }
 
   return (
@@ -41,11 +45,15 @@ const AddUserFrom = () => {
                 onChange={(e: any) => setValues({...values, email: e.target.value})}
             />
         </label>
-        <Button onClick={handleSubmit} className='flex my-5 w-auto btn btn-primary'>
-            <>
-                Submit
-            </>
-        </Button>
+        <Link href={'/'}>
+        
+            <Button onClick={handleSubmit} className='flex my-5 w-auto btn btn-primary'>
+                <>
+                    Submit
+                </>
+            </Button>
+            
+        </Link>
     </div>
   )
 }
