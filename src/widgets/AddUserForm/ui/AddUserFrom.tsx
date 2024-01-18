@@ -9,8 +9,11 @@ import React, { useState } from 'react'
 import { FormValues } from '../types'
 
 import Link from 'next/link'
+import { useDispatch } from 'react-redux'
+import { addUser } from '@/features/UserSlise/UserSlise'
 
 const AddUserFrom = () => {
+    const dispatch = useDispatch()
     const [values, setValues] = useState<FormValues>({
         name: '',
         email: ''
@@ -18,7 +21,11 @@ const AddUserFrom = () => {
 
     const handleSubmit = () => {
         setValues({name:'', email: ''})
-        console.log(values)
+        dispatch(addUser({
+            id: 3,
+            name: values.name,
+            email: values.email
+        }))
 
     }
 

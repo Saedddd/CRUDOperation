@@ -1,3 +1,5 @@
+'use client'
+
 import Button from '@/shared/ui/Button'
 import Link from 'next/link'
 import React, { useState } from 'react'
