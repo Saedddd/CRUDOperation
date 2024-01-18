@@ -19,8 +19,8 @@ const UserItem = ({id, name, email} : IUser) => {
                 </div>
 
                 <div className=" flex cursor-pointer  gap-2 ">
-                    <Link href={`edit-user/${id}`}>
-                        <FiEdit size={25} />
+                    <Link href={`/editUser/${id}`}>
+                        <FiEdit size={25} /> 
                     </Link>
 
                     <FiTrash2 size={25}/>
