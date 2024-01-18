@@ -3,7 +3,7 @@
 
 import Button from '@/shared/ui/Button'
 
-
+import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react'
 
 import { FormValues } from '../types'
@@ -22,7 +22,7 @@ const AddUserFrom = () => {
     const handleSubmit = () => {
         setValues({name:'', email: ''})
         dispatch(addUser({
-            id: 3,
+            id: uuidv4(),
             name: values.name,
             email: values.email
         }))
